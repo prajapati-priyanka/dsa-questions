@@ -1,4 +1,4 @@
-let number = 123;
+let number = -123000;
 let reverse = 0;
 let reverseNum;
 
@@ -11,13 +11,8 @@ function getReverseNumber(num) {
   return reverse;
 }
 function reverseNumber(num) {
-  if (num < 0) {
-    reverseNum = getReverseNumber(Math.abs(num));
-    console.log(-reverseNum);
-  } else {
-    reverseNum = getReverseNumber(num);
-    console.log(reverseNum);
-  }
+  reverseNum = getReverseNumber(Math.abs(num));
+  return num < 0 ? -reverseNum : reverseNum;
 }
 
-reverseNumber(number);
+console.log(reverseNumber(number));
