@@ -12,6 +12,8 @@ function getReverseNumber(num) {
 }
 function reverseNumber(num) {
   reverseNum = getReverseNumber(Math.abs(num));
+  const limit = Math.pow(2, 31);
+  if (reverseNum < -limit || reverseNum > limit) return 0; // corner case
   return num < 0 ? -reverseNum : reverseNum;
 }
 
